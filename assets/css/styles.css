@@ -1,0 +1,185 @@
+/*
+
+Codiciones generales:
+
+1-Para este desafío intenté posicionar los elementos sin recurrir a etiquetas div, ni soluciones tipo flex-box o grid layout.
+Se recurrió fundamentalente a propiedades vistas en clases como width, height, margin, padding, position y text-align.
+
+2-Me enfoqué en dejar una visual lo más limpia posible en modo pantalla completa (zoom 100)%,
+Intenté mantener la página relativamente ordenada en la medida que se expande o contrae la pantalla. 
+
+3-La única licencia que me tomé para intentar evitar overlapping y desorden fueron tres media query (stylesheet "responsive.css" anexado al index), modificando las propiedades anteriormente mencionadas para evitar
+el uso de divs, flex y grid layout. 
+
+4-Los stylesheets fueron separados para difrenciar la estructura inicial de lo que se fue especulando como responsivo, y en la medida que se contraía la pantalla. (ensayo y error).
+
+5-Existe consciencia de que la tabla no queda visible en su totalidad al reducir la pantalla al máximo, es algo que espero poder resolver con las herramientas que veremos en las próximas unidades.
+
+*/
+
+
+
+body{
+    margin:0;
+    padding:0;
+    font-size: 1.5em;
+    font-family: monospace;
+    font-weight: 900;
+    color: #555;
+    letter-spacing: .1em;
+
+}
+
+/*Texto especial (detalles del producto)*/
+.detalle{
+    color: #aaa; 
+    font-size: .7em;
+ }
+
+/* Links & link hover*/
+a{
+    color: #333;
+    text-decoration: none;
+    opacity: .6;
+    border-radius: 9px;
+    padding: .2em .2em;
+    transition: .4s ease;
+    border: none;
+}
+
+a:hover{
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/*Logo página*/
+
+.logo{
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    position: relative;
+    float:right;
+    top: -5em;
+    left: -1.4em;
+    padding: 1.1em;
+    transition: .5s ease-in-out .1s;
+}
+
+a .logo:hover{
+    filter:invert(.9);
+}
+
+
+
+/*////////////////Cuerpo//////////////// */
+
+/*Hedaer*/
+
+header{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("./../imgs/banner.png");
+    height: 25vh;
+    width: 80vw;
+    margin: 1.4em auto 1em auto;
+    border: none;
+    border-radius: 9px;
+    box-shadow: 0 0 10px 10px #eee;
+}
+
+
+header h1{
+    letter-spacing: .9em;
+    padding-top: 1.2em;
+    margin-right: 3em;
+    text-align: end;
+}
+
+header p{
+    margin:0 auto;
+    position: relative;
+    float:right;
+    left: 3.5em;
+    text-align: center;
+    letter-spacing: .32em;
+}
+
+/*Barra de Navegación*/
+
+nav{
+    width: 100%;
+    position: relative;
+    top: 1em;
+}
+
+nav li{
+    font-size: 1.2em;
+    padding-right: 1.5em;
+    list-style-type: none;
+    text-align: center;
+    float: left;
+}
+
+/*////////////////////////Contenido principal///////////////*/
+
+/*Contenedor*/
+main{
+    width: 80vw;
+    height: auto;
+    margin: 0 auto;
+}
+
+/*Tabla de productos*/
+table{
+    width: 100%;
+    padding-top: .5em;
+    text-align: center;
+}
+
+/*Título Tabla*/
+table thead h3{
+    font-size: 1em;
+    padding: 1.8em 1em;
+}
+
+
+/*Cada item de la tabla*/
+td{
+    margin: 0 1em;
+    padding: 1.4em;
+    transition: 0.7s ease-in-out .1s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+td:hover{
+    border: 1px solid rgba(230, 230, 230, 0.9);
+}  
+
+
+
+/*Contenido visusal de la tabla y su respectivo hover*/
+td img{
+    width: 80%;
+    padding-top: 1em;
+    border-radius: 15px;
+    transition: .2s ease-in-out;
+}
+
+td img:hover{
+transform: scale(1.03);
+}
+
+
+/*//////////////////////////////Footer//////////////////////////////*/
+footer{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("./../imgs/banner.png");
+    width: 80vw;
+    padding: 1.5em 0;
+    text-align:center;
+    margin: 2em auto;
+    border-radius: 9px;
+    box-shadow: 0 0 10px 10px #eee;
+}
+
+footer p{
+    padding-top: .5em;
+}
